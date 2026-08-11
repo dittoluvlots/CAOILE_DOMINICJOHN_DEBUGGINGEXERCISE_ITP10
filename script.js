@@ -1,15 +1,15 @@
 const heading = document.querySelector("#mainHeading");
-const nameInput = document.querySelector("#nameInput"); // changed #name to #nameInput to match the HTML IDs
+const nameInput = document.querySelector("#nameInput"); 
 const typingMessage = document.querySelector("#typingMessage");
 const resultMessage = document.querySelector("#resultMessage");
 const greetButton = document.querySelector("#greetButton");
 const colorButton = document.querySelector("#colorButton");
-const resetButton = document.querySelector("#resetButton"); // changed #resetBtn to #resetButton to match the HTML IDs
+const resetButton = document.querySelector("#resetButton"); 
 
 
 function displayGreeting() {
   const userName = nameInput.value.trim();
-  if (userName === "") { // changed "=" to "===" for strict comparison instead of assignment
+  if (userName === "") { 
     resultMessage.textContent =
       "Please enter your name.";
   } else {
@@ -25,7 +25,7 @@ function showTypedText() {
 }
 
 function changeBackground() {
-  document.body.style.backgroundColor = "lightblue"; // put lightblue inside quotation mark
+  document.body.style.backgroundColor = "lightblue"; 
   console.log("Background color changed.");
 }
 
@@ -38,8 +38,8 @@ function resetPage() {
   document.body.style.backgroundColor = "#f3f4f6";
 }
 
-greetButton.addEventListener("click", displayGreeting); //removed the parenthesis in displaygreeting so the function is referenced instead of execute
-colorButton.addEventListener("click", changeBackground); //Changed the invalid event name “clicked” to “click”. 
+greetButton.addEventListener("click", displayGreeting); 
+colorButton.addEventListener("click", changeBackground); 
 resetButton.addEventListener("click", resetPage);
-nameInput.addEventListener("input", showTypedText); // changed "change" to input so the message updates live while typing
+nameInput.addEventListener("input", showTypedText); 
 console.log("JavaScript file loaded successfully.");
